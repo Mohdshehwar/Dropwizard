@@ -1,0 +1,44 @@
+
+database:
+
+  driverClass: com.mysql.jdbc.Driver
+
+
+  user: ecommerceapp
+
+
+  password: ecommerceapp
+
+  url: jdbc:mysql://localhost:3306/student?allowPublicKeyRetrieval=true&useSSL=false
+
+
+  properties:
+    charSet: UTF-8
+
+
+
+  maxWaitForConnection: 1s
+
+
+  validationQuery: "/* MyApplication Health Check */ SELECT 1"
+
+
+  minSize: 8
+
+
+  maxSize: 32
+
+
+  checkConnectionWhileIdle: false
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 9002
+  adminConnectors:
+    - type: http
+      port: 9004
+
+
+
+
